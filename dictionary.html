@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dictionary Lookup - SelfStudyHebrew</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-brand">SelfStudyHebrew</div>
+      <ul class="nav-menu">
+        <li><a href="index.html">Setup</a></li>
+        <li><a href="subtitles.html">Subtitles</a></li>
+        <li><a href="dictionary.html" class="active">Dictionary</a></li>
+        <li><a href="cards.html">Card Creator</a></li>
+        <li><a href="generator.html">Sentence Generator</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="hero">
+    <div class="hero-content">
+      <h1>📖 Dictionary Lookup</h1>
+      <p class="hero-subtitle">Instant Hebrew word definitions with Shift+hover</p>
+      <p class="hero-description">Get comprehensive word information including definitions, frequency rankings, potential verb recognition.</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <!-- Overview -->
+    <section class="section">
+      <h2>Overview</h2>
+      <p>
+        The dictionary lookup feature provides instant access to Hebrew word information without leaving the page.
+        Simply hold Shift and hover over any Hebrew word to see its definition, frequency ranking, and more.
+      </p>
+
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="feature-icon">⚡</div>
+          <h3>Instant Lookup</h3>
+          <p>Shift+hover any Hebrew word for immediate definition popup</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">⚡</div>
+          <h3>Multiple Sources of Definitions</h3>
+          <p>The extension has built in dictionaries however there are also buttons to retrieve definitions from Google Translate, Reverso, and Pealim</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📊</div>
+          <h3>Frequency Data</h3>
+          <p>See how common a word is with frequency rankings from Hebrew corpora</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🔤</div>
+          <h3>Verb Conjugations</h3>
+          <p>Automatic detection of potential verb forms, and returns the associated verb infitive as well as the link to Pealim</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">✏️</div>
+          <h3>Custom Definitions</h3>
+          <p>Add your own definitions and notes for any word</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How to Use -->
+    <section class="section">
+      <h2>How to Use</h2>
+
+      <div class="step-card">
+        <div class="step-number">1</div>
+        <div class="step-content">
+          <h3>Hold Shift and Hover</h3>
+          <p>Hold down the Shift key and hover your mouse over any Hebrew word on a webpage.</p>
+          <div class="tip-box">
+            <strong>💡 Tip:</strong> Works on any website with Hebrew text—news sites, Wikipedia, social media, anywhere!
+          </div>
+        </div>
+      </div>
+
+      <div class="step-card">
+        <div class="step-number">2</div>
+        <div class="step-content">
+          <h3>View Word Information</h3>
+          <p>A popup will appear showing:</p>
+          <ul>
+            <li><strong>Word</strong> - The Hebrew word</li>
+            <li><strong>Definition</strong> - English translation from the built in dictionary if available</li>
+            <li><strong>Frequency Rank</strong> - How common the word is (lower number = more common)</li>
+            <li><strong>Verb Info</strong> - If a word is a confugated form of a verb it will return the infinitive and link to Pealim</li>
+            <li><strong>Custom Note</strong> - Your personal definition if you've added one</li>
+            <li><strong>External Definition Buttons</strong> - From a click of a button you can fetch the definition from Pealim, Reverso, or Google Translate</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="step-card">
+        <div class="step-number">3</div>
+        <div class="step-content">
+          <h3>Add Custom Definition (Optional)</h3>
+          <p>Click the "Add Custom Definition" button in the popup to Add your own translation</p>
+          <p>Custom definitions are saved locally and sync across all pages.</p>
+        </div>
+      </div>
+
+      <div class="step-card">
+        <div class="step-number">4</div>
+        <div class="step-content">
+          <h3>Create Anki Card or Mark as Already Known</h3>
+          <p>If you want to add the word to your Anki deck, click the "Create Card" button in the popup to open the card creator with the word pre-filled.</p>
+          <p>If you already know the word, click "Mark as Already Known". This will add it to the "Already Known" deck in Anki and register the word as known.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Troubleshooting -->
+    <section class="section">
+      <h2>Troubleshooting</h2>
+
+      <div class="faq-item">
+        <h3>Dictionary popup not appearing</h3>
+        <ul>
+          <li>Make sure you're holding Shift while hovering</li>
+          <li>Check that the text is actually Hebrew (not an image)</li>
+          <li>Verify Anki is running and AnkiConnect is connected</li>
+          <li>Try refreshing the page</li>
+        </ul>
+      </div>
+
+      <div class="faq-item">
+        <h3>Definitions showing "No definition available"</h3>
+        <ul>
+          <li>Word may not be in the local dictionary database</li>
+          <li>You can add a custom definition manually or just use the buttons to get definitions from 3rd party sources like Pealim, Reverso or Google Translate</li>
+        </ul>
+      </div>
+
+      <div class="faq-item">
+        <h3>Frequency rank not showing</h3>
+        <ul>
+          <li>Some proper nouns and rare words don't have frequency data</li>
+          <li>Technical terms may not be in frequency corpus</li>
+          <li>Frequency data is optional and doesn't affect other features</li>
+        </ul>
+      </div>
+
+      <div class="faq-item">
+        <h3>Custom definitions not saving</h3>
+        <ul>
+          <li>Check that browser storage permissions are enabled</li>
+          <li>Export your definitions before troubleshooting further</li>
+          <li>Try clearing dictionary cache in settings</li>
+        </ul>
+      </div>
+
+      <div class="faq-item">
+        <h3>Popup appears in wrong position</h3>
+        <ul>
+          <li>Usually happens on zoomed pages</li>
+          <li>Reset browser zoom to 100%</li>
+          <li>Refresh the page after changing zoom</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Back to Guide -->
+    <section class="section">
+      <div class="button-group">
+        <a href="subtitles.html" class="btn btn-secondary">← Back: Subtitles</a>
+        <a href="cards.html" class="btn btn-primary">Next: Card Creator →</a>
+      </div>
+    </section>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Created with ❤️ for Hebrew learners worldwide</p>
+      <p class="footer-links">
+        <a href="https://github.com/yourusername/selfstudyhebrew">GitHub</a> •
+        <a href="https://github.com/yourusername/selfstudyhebrew/blob/main/LICENSE">License</a> •
+        <a href="https://buymeacoffee.com/selfstudyhebrew">Support</a>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

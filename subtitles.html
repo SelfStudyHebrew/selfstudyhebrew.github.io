@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Subtitles - SelfStudyHebrew</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-brand">SelfStudyHebrew</div>
+      <ul class="nav-menu">
+        <li><a href="index.html">Setup</a></li>
+        <li><a href="subtitles.html" class="active">Subtitles</a></li>
+        <li><a href="dictionary.html">Dictionary</a></li>
+        <li><a href="cards.html">Card Creator</a></li>
+        <li><a href="generator.html">Sentence Generator</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="hero">
+    <div class="hero-content">
+      <h1>🎬 Video Subtitles</h1>
+      <p class="hero-subtitle">Learn Hebrew from videos with highlighted subtitles</p>
+      <p class="hero-description">Watch YouTube, Netflix and StreamIsrael with Hebrew subtitles that show which words you know, track your comprehension, and detect i+1 sentences.</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <!-- Overview -->
+    <section class="section">
+      <h2>Overview</h2>
+      <p>
+        The subtitle browser transforms Hebrew video content into an interactive learning experience.
+        Subtitles appear with word and sentence level highlighting based on your Anki progress, and you can navigate
+        between subtitles using keyboard shortcuts.
+      </p>
+
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="feature-icon">🎯</div>
+          <h3>Word Highlighting</h3>
+          <p>Every Hebrew word in subtitles is color-coded: green (mature), orange (learning), purple (potentially known), red (unknown)</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📊</div>
+          <h3>Comprehension Stats</h3>
+          <p>Real-time percentage showing how much of the video's vocabulary you know</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📚</div>
+          <h3>i+1 Detection</h3>
+          <p>Automatically highlights subtitle sentences with exactly one unknown word</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">⌨️</div>
+          <h3>Keyboard Navigation</h3>
+          <p>Jump between subtitles with arrow keys: ← previous, → next, ↓ repeat</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Supported Platforms -->
+    <section class="section">
+      <h2>Supported Platforms</h2>
+
+      <div class="step-card">
+       <div class="step-content">
+        <li>YouTube</li>
+        <li>Netflix</li>
+        <li>StreamIsrael</li>
+        <br>
+        <li><strong>More can be added on request!</strong></li>
+        </div>
+      </div>
+    </section>
+
+    <!-- How to Use -->
+    <section class="section">
+      <h2>How to Use</h2>
+
+      <div class="step-card">
+        <div class="step-number">1</div>
+        <div class="step-content">
+          <h3>Open a Video with Hebrew Subtitles</h3>
+          <p>Navigate to YouTube or Netflix and play a video that has Hebrew subtitles available.</p>
+          <p>The subtitle browser sidebar will open on the right side of the screen.</p>
+        </div>
+      </div>
+
+      <div class="step-card">
+        <div class="step-number">2</div>
+        <div class="step-content">
+          <h3>View Highlighted Subtitles</h3>
+          <p>As the video plays, you'll see:</p>
+          <ul>
+            <li><strong>Overlay subtitle</strong> - Large text at bottom of video with highlighting</li>
+            <li><strong>Sidebar subtitles</strong> - Scrollable list of all subtitles with timestamps</li>
+            <li><strong>Comprehension percentage</strong> - Shows what % of words you know</li>
+            <li><strong>i+1 sentence count</strong> - Number of optimal learning sentences</li>
+            <li><strong>Potential i+1 sentence count</strong> - Number of sentences which may be i+1 and are worth reviewing.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="step-card">
+        <div class="step-number">3</div>
+        <div class="step-content">
+          <h3>Navigate with Keyboard or Mouse</h3>
+          <p>Use arrow keys to control subtitle navigation:</p>
+          <ul>
+            <li><span class="shortcut-key">←</span> Jump to previous subtitle</li>
+            <li><span class="shortcut-key">→</span> Jump to next subtitle</li>
+            <li><span class="shortcut-key">↓</span> Repeat current subtitle (jump to start)</li>
+          </ul>
+          <p>The video will jump to the timestamp of the selected subtitle. You can also click a subtitle in the browser to jump to that subtitle.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Troubleshooting -->
+    <section class="section">
+      <h2>Troubleshooting</h2>
+
+      <div class="faq-item">
+        <h3>Subtitle browser doesn't appear</h3>
+        <ul>
+          <li>Make sure the video has Hebrew subtitles</li>
+          <li>Try refreshing the page</li>
+          <li>Check that AnkiConnect shows "Connected" in the extension popup</li>
+        </ul>
+      </div>
+
+      <div class="faq-item">
+        <h3>Words not highlighting in subtitles</h3>
+        <ul>
+          <li>Click "Refresh Words" in the extension popup</li>
+          <li>Verify your Anki field name is correct in settings</li>
+          <li>Ensure highlighting is enabled in the extension popup menu</li>
+          <li>Make sure Anki is running</li>
+        </ul>
+      </div>
+
+      <div class="faq-item">
+        <h3>YouTube anti-bot warning</h3>
+        <ul>
+          <li>Disable any VPN or proxy</li>
+          <li>Try again in a few minutes</li>
+        </ul>
+      </div>
+
+      <div class="faq-item">
+        <h3>Arrow keys not working</h3>
+        <ul>
+          <li>Make sure you're not active in a text field at the same time</li>
+          <li>Click on the video player to focus it</li>
+          <li>If no subtitles loaded, arrow keys work normally</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Back to Guide -->
+    <section class="section">
+      <div class="button-group">
+        <a href="index.html" class="btn btn-secondary">← Back to Setup</a>
+        <a href="dictionary.html" class="btn btn-primary">Next: Dictionary →</a>
+      </div>
+    </section>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Created with ❤️ for Hebrew learners worldwide</p>
+      <p class="footer-links">
+        <a href="https://github.com/yourusername/selfstudyhebrew">GitHub</a> •
+        <a href="https://github.com/yourusername/selfstudyhebrew/blob/main/LICENSE">License</a> •
+        <a href="https://buymeacoffee.com/selfstudyhebrew">Support</a>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

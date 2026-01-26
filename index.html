@@ -4,624 +4,278 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SelfStudyHebrew - Setup Guide</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-      line-height: 1.6;
-      color: #333;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      min-height: 100vh;
-      padding: 40px 20px;
-    }
-
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-      overflow: hidden;
-    }
-
-    .header {
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      color: white;
-      padding: 60px 40px;
-      text-align: center;
-    }
-
-    .header h1 {
-      font-size: 48px;
-      font-weight: 700;
-      margin-bottom: 16px;
-      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    }
-
-    .header p {
-      font-size: 20px;
-      opacity: 0.95;
-    }
-
-    .content {
-      padding: 50px 40px;
-    }
-
-    .section {
-      margin-bottom: 50px;
-    }
-
-    .section:last-child {
-      margin-bottom: 0;
-    }
-
-    h2 {
-      font-size: 32px;
-      font-weight: 600;
-      color: #667eea;
-      margin-bottom: 20px;
-      padding-bottom: 10px;
-      border-bottom: 3px solid #667eea;
-    }
-
-    h3 {
-      font-size: 24px;
-      font-weight: 600;
-      color: #444;
-      margin: 30px 0 15px 0;
-    }
-
-    p {
-      margin-bottom: 16px;
-      font-size: 16px;
-      line-height: 1.8;
-    }
-
-    .step {
-      background: #f8f9fa;
-      border-left: 4px solid #667eea;
-      padding: 20px;
-      margin-bottom: 20px;
-      border-radius: 4px;
-    }
-
-    .step h4 {
-      font-size: 18px;
-      font-weight: 600;
-      color: #667eea;
-      margin-bottom: 12px;
-    }
-
-    .step ol, .step ul {
-      margin-left: 20px;
-      margin-bottom: 12px;
-    }
-
-    .step li {
-      margin-bottom: 8px;
-    }
-
-    code {
-      background: #e9ecef;
-      padding: 2px 6px;
-      border-radius: 3px;
-      font-family: 'Courier New', monospace;
-      font-size: 14px;
-      color: #d63384;
-    }
-
-    .code-block {
-      background: #1e1e1e;
-      color: #d4d4d4;
-      padding: 20px;
-      border-radius: 6px;
-      overflow-x: auto;
-      margin: 16px 0;
-      font-family: 'Courier New', monospace;
-      font-size: 14px;
-      line-height: 1.5;
-    }
-
-    .feature-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      margin: 30px 0;
-    }
-
-    .feature-card {
-      background: #f8f9fa;
-      padding: 24px;
-      border-radius: 8px;
-      border-top: 4px solid #667eea;
-    }
-
-    .feature-card h4 {
-      font-size: 18px;
-      font-weight: 600;
-      color: #667eea;
-      margin-bottom: 10px;
-    }
-
-    .feature-card p {
-      margin: 0;
-      font-size: 15px;
-      color: #666;
-    }
-
-    .warning {
-      background: #fff3cd;
-      border-left: 4px solid #ffc107;
-      padding: 16px;
-      margin: 20px 0;
-      border-radius: 4px;
-    }
-
-    .warning strong {
-      color: #856404;
-    }
-
-    .info {
-      background: #d1ecf1;
-      border-left: 4px solid #17a2b8;
-      padding: 16px;
-      margin: 20px 0;
-      border-radius: 4px;
-    }
-
-    .info strong {
-      color: #0c5460;
-    }
-
-    .button {
-      display: inline-block;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      color: white;
-      padding: 14px 32px;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: 600;
-      font-size: 16px;
-      transition: transform 0.2s, box-shadow 0.2s;
-      margin: 10px 10px 10px 0;
-    }
-
-    .button:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
-    }
-
-    .highlight-colors {
-      display: flex;
-      gap: 20px;
-      margin: 20px 0;
-      flex-wrap: wrap;
-    }
-
-    .color-sample {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .color-box {
-      width: 40px;
-      height: 40px;
-      border-radius: 4px;
-      border: 2px solid #ddd;
-    }
-
-    .color-box.green {
-      background: #2d5016;
-    }
-
-    .color-box.orange {
-      background: #ff8c00;
-    }
-
-    .color-box.red {
-      background: #dc3545;
-    }
-
-    .color-box.blue {
-      background: #add8e6;
-    }
-
-    .footer {
-      background: #f8f9fa;
-      padding: 30px 40px;
-      text-align: center;
-      color: #666;
-      font-size: 14px;
-    }
-
-    .footer a {
-      color: #667eea;
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    .footer a:hover {
-      text-decoration: underline;
-    }
-
-    @media (max-width: 768px) {
-      .header h1 {
-        font-size: 36px;
-      }
-
-      .header p {
-        font-size: 18px;
-      }
-
-      .content {
-        padding: 30px 20px;
-      }
-
-      h2 {
-        font-size: 26px;
-      }
-
-      .feature-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="container">
-    <div class="header">
-      <h1>SelfStudyHebrew</h1>
-      <p>Master Hebrew through comprehensible input</p>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-brand">SelfStudyHebrew</div>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="active">Setup</a></li>
+        <li><a href="subtitles.html">Subtitles</a></li>
+        <li><a href="dictionary.html">Dictionary</a></li>
+        <li><a href="cards.html">Card Creator</a></li>
+        <li><a href="generator.html">Sentence Generator</a></li>
+      </ul>
     </div>
+  </nav>
 
-    <div class="content">
-      <!-- Introduction -->
-      <div class="section">
-        <h2>What is SelfStudyHebrew?</h2>
-        <p>
-          SelfStudyHebrew is a browser extension that connects to Anki and highlights Hebrew words across the web based on your learning progress.
-          It helps you learn Hebrew through comprehensible input by showing you exactly which words you know, which you're learning, and which are new.
-        </p>
+  <div class="hero">
+    <div class="hero-content">
+      <h1>SelfStudyHebrew</h1>
+      <p class="hero-subtitle">Learn Hebrew through comprehensible input</p>
+      <p class="hero-description">A browser extension that connects to Anki and highlights Hebrew words across the web based on your learning progress.</p>
+      <div class="hero-buttons">
+        <a href="https://github.com/SelfStudyHebrew/selfstudyhebrew.github.io" class="btn btn-primary" target="_blank">View on GitHub</a>
+        <a href="https://buymeacoffee.com/selfstudyhebrew" class="btn btn-secondary" target="_blank">☕ Support</a>
+      </div>
+    </div>
+  </div>
 
-        <div class="feature-grid">
-          <div class="feature-card">
-            <h4>🎯 Smart Highlighting</h4>
-            <p>Words are color-coded based on your Anki progress: mature (green), learning (orange), and unknown (red).</p>
-          </div>
-          <div class="feature-card">
-            <h4>📚 i+1 Detection</h4>
-            <p>Automatically highlights sentences with exactly one unknown word—the perfect learning zone.</p>
-          </div>
-          <div class="feature-card">
-            <h4>📖 Dictionary Lookup</h4>
-            <p>Shift+hover any Hebrew word for instant definitions, frequency rankings, and verb conjugations.</p>
-          </div>
-          <div class="feature-card">
-            <h4>🎬 Video Subtitles</h4>
-            <p>Watch Hebrew content on YouTube and Netflix with highlighted subtitles and comprehension tracking.</p>
-          </div>
-          <div class="feature-card">
-            <h4>🃏 Anki Integration</h4>
-            <p>Create flashcards directly from sentences with optional AI-powered translations.</p>
-          </div>
-          <div class="feature-card">
-            <h4>🤖 AI Sentence Generator</h4>
-            <p>Generate personalized i+1 sentences using words you know to learn new vocabulary in context.</p>
-          </div>
+  <div class="container">
+    <!-- Quick Overview -->
+    <section class="section">
+      <h2>What is SelfStudyHebrew?</h2>
+      <p>SelfStudyHebrew is a browser extension that helps you learn Hebrew through comprehensible input. It highlights Hebrew words on any webpage based on your Anki progress, detects optimal learning sentences (i+1), and provides instant dictionary lookups. It also provides sentence mining functionality through video subtitles or AI generated sentences.</p>
+
+      <div class="color-guide">
+        <div class="color-item">
+          <div class="color-box green-underline">שלום</div>
+          <span>Mature words (≥21 days)</span>
         </div>
+        <div class="color-item">
+          <div class="color-box orange-underline">טוב</div>
+          <span>Learning words (&lt;21 days)</span>
+        </div>
+        <div class="color-item">
+          <div class="color-box purple-underline">לשלום</div>
+          <span>Potentially-known (Preposition detected)</span>
+        </div>
+        <div class="color-item">
+          <div class="color-box red-underline">חדש</div>
+          <span>Unknown words</span>
+        </div>
+        <div class="color-item">
+          <div class="color-box i1-bg">i+1 sentence</div>
+          <span>Optimal learning zone</span>
+        </div>
+        <div class="color-item">
+          <div class="color-box potentially-i1-bg">potentially-i+1</div>
+          <span>Almost optimal (1 prefix + 0-1 unknown)</span>
+        </div>
+      </div>
+    </section>
 
-        <div class="highlight-colors">
-          <div class="color-sample">
-            <div class="color-box green"></div>
-            <span><strong>Green underline</strong> = Mature/known words (≥21 days)</span>
-          </div>
-          <div class="color-sample">
-            <div class="color-box orange"></div>
-            <span><strong>Orange underline</strong> = Learning words (&lt;21 days)</span>
-          </div>
-          <div class="color-sample">
-            <div class="color-box red"></div>
-            <span><strong>Red underline</strong> = Unknown words</span>
-          </div>
-          <div class="color-sample">
-            <div class="color-box blue"></div>
-            <span><strong>Light blue background</strong> = i+1 sentences</span>
-          </div>
+    <!-- Potentially-Known Words -->
+    <section class="section" id="potentially-known">
+      <h2>Preposition Recognition</h2>
+      <p>The extension detects Hebrew prepositions to help you recognize more words. When a word starts with common prepositions like ל , ב or ש, the extension checks if you know the word without the preposition.</p>
+
+      <div class="info-box">
+        <h3>How It Works</h3>
+        <ul>
+          <li><strong>ו (and)</strong> - Words starting with ו are treated as fully known if you know the base word. Example: אני → ואני</li>
+          <li><strong>ל/ב/ש</strong> - Words with these prepositions are marked as "potentially-known" (purple underline) if you know the base word</li>
+          <li><strong>Potentially-i+1 sentences</strong> - Sentences with 1 potentially-known word and 0-1 unknown words (light purple background)</li>
+        </ul>
+        <p>This helps you understand more content by recognizing words, even if you haven't seen that exact preposition+word combination before.</p>
+      </div>
+    </section>
+
+    <!-- Key Features -->
+    <section class="section">
+      <h2>Key Features</h2>
+      <div class="feature-grid">
+        <a href="index.html#highlighting" class="feature-card">
+          <div class="feature-icon">🎯</div>
+          <h3>Smart Highlighting</h3>
+          <p>Automatic color-coding of Hebrew words based on your Anki progress</p>
+        </a>
+        <a href="subtitles.html" class="feature-card">
+          <div class="feature-icon">🎬</div>
+          <h3>Video Subtitles</h3>
+          <p>Highlighted Hebrew subtitles on YouTube, Netflix, and StreamIsrael</p>
+        </a>
+        <a href="dictionary.html" class="feature-card">
+          <div class="feature-icon">📖</div>
+          <h3>Dictionary Lookup</h3>
+          <p>Shift+hover for instant definitions, frequency, and potential verb identification</p>
+        </a>
+        <a href="cards.html" class="feature-card">
+          <div class="feature-icon">🃏</div>
+          <h3>Anki Integration</h3>
+          <p>Create flashcards directly from sentences with optional AI translations</p>
+        </a>
+        <a href="generator.html" class="feature-card">
+          <div class="feature-icon">🤖</div>
+          <h3>Sentence Generator</h3>
+          <p>Generate personalized i+1 sentences using your known vocabulary</p>
+        </a>
+        <a href="index.html#i1" class="feature-card">
+          <div class="feature-icon">📚</div>
+          <h3>i+1 Detection</h3>
+          <p>Find sentences with exactly one unknown word—perfect for learning</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- Prerequisites -->
+    <section class="section">
+      <h2>Prerequisites</h2>
+
+      <div class="step-card">
+        <div class="step-number">1</div>
+        <div class="step-content">
+          <h3>Anki Desktop</h3>
+          <p>Install Anki on your computer and make sure it's running when using the extension.</p>
+          <a href="https://apps.ankiweb.net/" class="btn btn-small" target="_blank">Download Anki</a>
         </div>
       </div>
 
-      <!-- Prerequisites -->
-      <div class="section">
-        <h2>Prerequisites</h2>
-
-        <div class="step">
-          <h4>1. Anki Desktop Application</h4>
-          <p>You need Anki installed and running on your computer.</p>
-          <a href="https://apps.ankiweb.net/" class="button" target="_blank">Download Anki</a>
-        </div>
-
-        <div class="step">
-          <h4>2. AnkiConnect Add-on</h4>
+      <div class="step-card">
+        <div class="step-number">2</div>
+        <div class="step-content">
+          <h3>AnkiConnect Add-on</h3>
           <p>This add-on allows the extension to communicate with Anki.</p>
           <ol>
-            <li>Open Anki</li>
-            <li>Go to <code>Tools → Add-ons → Get Add-ons</code></li>
+            <li>Open Anki → Tools → Add-ons → Get Add-ons</li>
             <li>Enter code: <code>2055492159</code></li>
-            <li>Click OK and restart Anki</li>
+            <li>Restart Anki</li>
           </ol>
-          <a href="https://ankiweb.net/shared/info/2055492159" class="button" target="_blank">More Info</a>
-        </div>
-
-        <div class="step">
-          <h4>3. Firefox Browser (or Chrome)</h4>
-          <p>Currently optimized for Firefox. Chrome support coming soon!</p>
+          <a href="https://git.sr.ht/~foosoft/anki-connect" class="btn btn-small" target="_blank">More Info</a>
         </div>
       </div>
 
-      <!-- Installation -->
-      <div class="section">
-        <h2>Installation</h2>
-
-        <h3>For Firefox (Temporary Installation)</h3>
-        <div class="step">
-          <ol>
-            <li>Download or clone the extension repository</li>
-            <li>Open Firefox and navigate to <code>about:debugging</code></li>
-            <li>Click "This Firefox" in the left sidebar</li>
-            <li>Click "Load Temporary Add-on"</li>
-            <li>Navigate to the extension directory and select <code>manifest.json</code></li>
-          </ol>
-        </div>
-
-        <div class="warning">
-          <strong>⚠️ Note:</strong> Temporary add-ons are removed when Firefox closes. For permanent installation, the extension needs to be signed through Firefox Add-ons Developer Hub or installed as a self-distributed extension.
-        </div>
-
-        <h3>For Chrome (Coming Soon)</h3>
-        <div class="info">
-          <strong>ℹ️ Chrome Support:</strong> Chrome version is in development. The extension is 95% compatible and will be available on the Chrome Web Store soon.
+      <div class="step-card">
+        <div class="step-number">3</div>
+        <div class="step-content">
+          <h3>Firefox Browser</h3>
+          <p>Install the Firefox extension. Chrome support coming soon.</p>
         </div>
       </div>
+    </section>
 
-      <!-- Setup -->
-      <div class="section">
-        <h2>Initial Setup</h2>
+    <!-- Initial Setup -->
+    <section class="section">
+      <h2>Initial Setup</h2>
 
-        <div class="step">
-          <h4>Step 1: Configure Anki Field Name</h4>
+      <div class="step-card">
+        <div class="step-number">1</div>
+        <div class="step-content">
+          <h3>Configure Anki Settings</h3>
           <ol>
-            <li>Click the extension icon in your browser toolbar</li>
-            <li>Click "Settings"</li>
-            <li>Set the <strong>Anki Field Name</strong> to match your Hebrew field (default: "Hebrew")</li>
-            <li>Optionally, set a <strong>Deck Filter</strong> to limit to specific decks</li>
+            <li>Click the Extension button in your toolbar, then on the popup screen click "Settings"</li>
+            <li>Scroll down and click the "Setup Anki for SelfStudyHebrew" button.</li>
+            <li>Under "Card Creation Defaults" set which deck you want to save your sentences to, and the default note type to use. If using SelfStudyHebrew defaults, these values will be "SelfStudyHebrew" and "Hebrew"</li>
+            <li>Under "Highlighting Options", set <strong>Anki Field Name</strong> to match your Hebrew field (default: "Hebrew")</li>
             <li>Click "Save Settings"</li>
           </ol>
         </div>
+      </div>
 
-        <div class="step">
-          <h4>Step 2: Load Your Hebrew Words</h4>
+      <div class="step-card">
+        <div class="step-number">2</div>
+        <div class="step-content">
+          <h3>Load Your Vocabulary</h3>
           <ol>
             <li>Make sure Anki is running</li>
-            <li>In the extension popup, check that AnkiConnect shows "Connected"</li>
-            <li>Click "Refresh Words" to load your vocabulary from Anki</li>
-            <li>You should see your word counts appear (Mature, Learning, Total)</li>
+            <li>Check that AnkiConnect shows "Connected" in the popup</li>
+            <li>Click "Refresh Words"</li>
+            <li>Your word counts should appear if you have studied any Hebrew words already.</li>
           </ol>
+          <ul>
+          <li>If you have a list of known words from another source you can use the "Bulk Import to Already Known Deck" feature in the extension settings</li>
+          <li>This will import them into the "Already Known" deck in Anki and the extension will then treat them as known.</li>
+          </ul>
         </div>
+      </div>
 
-        <div class="step">
-          <h4>Step 3: Test It Out!</h4>
+      <div class="step-card">
+        <div class="step-number">3</div>
+        <div class="step-content">
+          <h3>Test It Out</h3>
           <ol>
-            <li>Navigate to any Hebrew website or article</li>
-            <li>You should see Hebrew words highlighted based on your knowledge</li>
-            <li>Shift+hover over any word to see dictionary definitions</li>
-            <li>Look for light blue highlighted sentences (i+1 sentences)</li>
+            <li>Visit any Hebrew website</li>
+            <li>Hebrew words should be highlighted based on their status in Anki</li>
+            <li>Shift+hover any word for definitions</li>
+            <li>Look for light blue i+1 sentences, or light purple potential i+1 sentences</li>
           </ol>
         </div>
-
-        <div class="info">
-          <strong>💡 Tip:</strong> Try watching a YouTube video with Hebrew subtitles! Click the "📖 Hebrew Subs" button that appears to see highlighted subtitles and comprehension statistics.
-        </div>
       </div>
+    </section>
 
-      <!-- Features -->
-      <div class="section">
-        <h2>Key Features</h2>
+    <!-- Optional AI Setup -->
+    <section class="section" id="ai-features">
+      <h2>Optional: AI Features</h2>
+      <p>Enable Claude AI for enhanced translations, definitions, and sentence generation. This is entirely optional and will cost money should you choose to use it.</p>
 
-        <h3>Word Highlighting</h3>
-        <p>
-          Every Hebrew word on any webpage is automatically highlighted based on your Anki progress.
-          Words are categorized as mature (≥21 days interval), learning (&lt;21 days), or unknown.
-        </p>
-
-        <h3>i+1 Sentence Detection</h3>
-        <p>
-          The extension highlights sentences with exactly one unknown Hebrew word (ignoring non-Hebrew text).
-          This is the optimal difficulty level for language acquisition—challenging but comprehensible.
-        </p>
-
-        <h3>Dictionary Popup</h3>
-        <p>Shift+hover any Hebrew word to see:</p>
-        <ul>
-          <li>Definitions from multiple Hebrew-English dictionaries</li>
-          <li>Word frequency ranking (how common the word is)</li>
-          <li>Verb conjugation patterns (binyanim)</li>
-          <li>Custom definitions you've added</li>
-          <li>Option to mark word as "already known"</li>
-        </ul>
-
-        <h3>Video Subtitle Support</h3>
-        <p>Works with YouTube and Netflix Hebrew subtitles:</p>
-        <ul>
-          <li>Subtitles appear with word-level highlighting</li>
-          <li>Subtitle browser shows all subtitles with timestamps</li>
-          <li>Real-time comprehension percentage</li>
-          <li>i+1 sentence detection in subtitles</li>
-          <li>Keyboard navigation (← → ↓ keys to jump between subtitles)</li>
-        </ul>
-
-        <h3>Anki Card Creation</h3>
-        <p>
-          Create flashcards directly from highlighted sentences. The extension can optionally use Claude AI
-          to generate translations and definitions for unknown words.
-        </p>
-
-        <h3>i+1 Sentence Generator</h3>
-        <p>
-          Generate personalized Hebrew sentences that contain exactly one unknown word, using only words you already know.
-          Perfect for targeted vocabulary acquisition in context.
-        </p>
-        <ul>
-          <li>Uses frequency-ranked unknown words</li>
-          <li>All other words in sentences are from your known vocabulary</li>
-          <li>Configurable number of words and sentences</li>
-          <li>Copy sentences, translate on Reverso, or create Anki cards directly</li>
-        </ul>
-      </div>
-
-      <!-- AI Features -->
-      <div class="section">
-        <h2>Optional: AI Features</h2>
-
-        <p>
-          SelfStudyHebrew can use Claude AI for enhanced features like translations, definitions, and sentence generation.
-          This is completely optional—the core features work without it.
-        </p>
-
-        <div class="step">
-          <h4>Setting Up Claude API</h4>
+      <div class="step-card">
+        <div class="step-content">
+          <h3>Setting Up Claude API</h3>
           <ol>
             <li>Get an API key from <a href="https://console.anthropic.com/" target="_blank">console.anthropic.com</a></li>
             <li>Open extension settings</li>
-            <li>Enter your API key in the "Claude API Key" field</li>
-            <li><strong>Important:</strong> Set spending limits at <a href="https://console.anthropic.com/settings/limits" target="_blank">console.anthropic.com/settings/limits</a></li>
+            <li>Enter your API key in "Claude API Key"</li>
             <li>Save settings</li>
           </ol>
-        </div>
-
-        <div class="warning">
-          <strong>⚠️ Cost Control:</strong> The i+1 sentence generator uses Claude's prompt caching feature to minimize costs.
-          At default settings (3000 words), expect ~$0.05 per generation session (5 words), or ~$17/year for daily use.
-          Always set spending limits in your Anthropic account!
-        </div>
-
-        <div class="info">
-          <strong>💡 Cost Optimization:</strong> You can adjust "Max Words for i+1 Generation" in settings to balance between
-          cost (lower = cheaper) and sentence variety (higher = more variety). The system uses smart sampling:
-          50% most frequent words + 50% random words for optimal results.
+          <strong>⚠️ Warning:</strong> Your API key is going to be stored in your browser which means that theoretically it can be stolen if you install malware on your machine, however if you apply the following guidance then you can minimize risk to an acceptable level.<br><br><strong>⚠️ Strongly recommended:</strong> Set API spend limits at <a href="https://console.anthropic.com/settings/limits" target="_blank">console.anthropic.com/settings/limits</a> and ensure "Auto reload credits" is disabled at <a href="https://console.anthropic.com/settings/billing" target="_blank">console.anthropic.com/settings/billing</a> to avoid unexpected charges. 
         </div>
       </div>
+    </section>
 
-      <!-- Tips -->
-      <div class="section">
-        <h2>Tips & Best Practices</h2>
+    <!-- Troubleshooting -->
+    <section class="section">
+      <h2>Troubleshooting</h2>
 
-        <div class="step">
-          <h4>📚 For Effective Learning</h4>
-          <ul>
-            <li>Focus on i+1 sentences—they're your optimal learning zone</li>
-            <li>Use the sentence generator to create targeted study material</li>
-            <li>Watch Hebrew videos with subtitles to practice listening and reading together</li>
-            <li>Mark words as "already known" when you recognize them outside of Anki</li>
-          </ul>
-        </div>
-
-        <div class="step">
-          <h4>⚙️ Performance Tips</h4>
-          <ul>
-            <li>Refresh your word list periodically (especially after Anki study sessions)</li>
-            <li>The extension caches dictionary data and word lists for better performance</li>
-            <li>Use "Strip Nikud" option if you prefer reading without vowel marks</li>
-            <li>Set a deck filter if you only want to track specific Anki decks</li>
-          </ul>
-        </div>
-
-        <div class="step">
-          <h4>🎬 Video Learning Tips</h4>
-          <ul>
-            <li>Use arrow keys to navigate between subtitles (← previous, → next, ↓ repeat)</li>
-            <li>The subtitle browser shows all subtitles with comprehension stats</li>
-            <li>Create Anki cards directly from interesting subtitle sentences</li>
-            <li>Watch the same content multiple times to track your progress</li>
-          </ul>
-        </div>
-
-        <div class="step">
-          <h4>💾 Data Management</h4>
-          <ul>
-            <li>Export custom definitions regularly (auto-export option available)</li>
-            <li>Export your known words list for backup</li>
-            <li>Bulk import words to the "AlreadyKnown" deck for words you recognize</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Troubleshooting -->
-      <div class="section">
-        <h2>Troubleshooting</h2>
-
+      <div class="faq-item">
         <h3>AnkiConnect shows "Disconnected"</h3>
         <ul>
           <li>Make sure Anki is running</li>
           <li>Verify AnkiConnect is installed (code: 2055492159)</li>
-          <li>Check that AnkiConnect is listening on port 8765 (default)</li>
           <li>Try restarting Anki</li>
         </ul>
+      </div>
 
+      <div class="faq-item">
         <h3>Words not highlighting</h3>
         <ul>
-          <li>Check that "Enable Highlighting" is turned on in the popup</li>
-          <li>Verify your "Anki Field Name" matches your cards</li>
-          <li>Click "Refresh Words" to reload from Anki</li>
-          <li>Make sure you're on a page with Hebrew text</li>
+          <li>Check "Enable Highlighting" is on in the popup</li>
+          <li>Verify "Anki Field Name" matches your cards</li>
+          <li>Click "Refresh Words"</li>
         </ul>
+      </div>
 
+      <div class="faq-item">
         <h3>YouTube subtitles not working</h3>
         <ul>
-          <li>Make sure the video has Hebrew subtitles available</li>
+          <li>Make sure the video has Hebrew subtitles</li>
           <li>Try refreshing the page</li>
-          <li>Check browser console for errors (F12)</li>
-          <li>Disable VPN if you're getting anti-bot warnings</li>
-        </ul>
-
-        <h3>i+1 Generator errors</h3>
-        <ul>
-          <li>Verify your Claude API key is correct</li>
-          <li>Check you haven't exceeded your API spending limit</li>
-          <li>Make sure you have known words loaded from Anki</li>
-          <li>Try reducing "Max Words for i+1 Generation" if you get timeouts</li>
+          <li>Disable VPN if you get anti-bot warnings</li>
         </ul>
       </div>
+    </section>
 
-      <!-- Support -->
-      <div class="section">
-        <h2>Support & Contribution</h2>
-
-        <p>
-          SelfStudyHebrew is an open-source project. If you encounter bugs, have feature requests,
-          or want to contribute, please visit the GitHub repository.
-        </p>
-
-        <a href="https://github.com/yourusername/selfstudyhebrew" class="button" target="_blank">GitHub Repository</a>
-        <a href="https://github.com/yourusername/selfstudyhebrew/issues" class="button" target="_blank">Report an Issue</a>
-        <a href="https://buymeacoffee.com/yourusername" class="button" target="_blank">☕ Buy Me a Coffee</a>
+    <!-- Support -->
+    <section class="section">
+      <h2>Support & Contribute</h2>
+      <p>SelfStudyHebrew is open-source. Found a bug? Have a feature request? Visit the GitHub repository.</p>
+      <div class="button-group">
+        <a href="https://github.com/yourusername/selfstudyhebrew" class="btn btn-primary" target="_blank">GitHub</a>
+        <a href="https://github.com/yourusername/selfstudyhebrew/issues" class="btn btn-secondary" target="_blank">Report Issue</a>
+        <a href="https://buymeacoffee.com/selfstudyhebrew" class="btn btn-coffee" target="_blank">☕ Buy Me a Coffee</a>
       </div>
-    </div>
+    </section>
+  </div>
 
-    <div class="footer">
+  <footer class="footer">
+    <div class="container">
       <p>Created with ❤️ for Hebrew learners worldwide</p>
-      <p>Built with Anki, Claude AI, and modern web technologies</p>
-      <p style="margin-top: 20px;">
+      <p class="footer-links">
         <a href="https://github.com/yourusername/selfstudyhebrew">GitHub</a> •
         <a href="https://github.com/yourusername/selfstudyhebrew/blob/main/LICENSE">License</a> •
-        <a href="https://buymeacoffee.com/yourusername">Support</a>
+        <a href="https://buymeacoffee.com/selfstudyhebrew">Support</a>
       </p>
     </div>
-  </div>
+  </footer>
 </body>
 </html>

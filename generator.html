@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sentence Generator - SelfStudyHebrew</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-brand">SelfStudyHebrew</div>
+      <ul class="nav-menu">
+        <li><a href="index.html">Setup</a></li>
+        <li><a href="subtitles.html">Subtitles</a></li>
+        <li><a href="dictionary.html">Dictionary</a></li>
+        <li><a href="cards.html">Card Creator</a></li>
+        <li><a href="generator.html" class="active">Sentence Generator</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="hero">
+    <div class="hero-content">
+      <h1>🤖 i+1 Sentence Generator</h1>
+      <p class="hero-subtitle">AI-powered personalized Hebrew sentences</p>
+      <p class="hero-description">Generate custom i+1 sentences using your known vocabulary and AI. Perfect for focused vocabulary acquisition when you can't find natural content at your level.</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <!-- Overview -->
+    <section class="section">
+      <h2>Overview</h2>
+      <p>
+        The i+1 Sentence Generator uses Claude AI to create personalized Hebrew sentences that contain exactly one unknown word, sorted by frequency.
+      </p>
+    </section>
+
+    <!-- How to Use -->
+    <section class="section">
+      <h2>How to Use the Generator</h2>
+
+      <div class="step-card">
+        <div class="step-number">1</div>
+        <div class="step-content">
+          <h3>Open the Sentence Generator</h3>
+          <p>Click the extension icon in your toolbar, then click the "Sentence Generator" button in the popup.</p>
+          <div class="info-box">
+            <strong>⚡ Requirement:</strong> You must have Claude API configured in settings to use this feature.
+            See the <a href="index.html#ai-features">Setup Guide</a> for instructions.
+          </div>
+        </div>
+      </div>
+
+      <div class="step-card">
+        <div class="step-number">2</div>
+        <div class="step-content">
+          <h3>Select Number of Words/Sentences</h3>
+          <p>Choose how many words you want to learn and how many sentences to generate per word.</p>
+          <p>Click "Start Generation"</p>
+        </div>
+      </div>
+
+      <div class="step-card">
+        <div class="step-number">3</div>
+        <div class="step-content">
+          <h3>Review Your Vocabulary</h3>
+          <p>The generator first shows you a list of words to review. These are the highest frequency words that you do not currently know. For each word:</p>
+          <ul>
+            <li><strong> Untick if you know it</strong> - This will mark it as known</li>
+          </ul>
+          <p>Click "Generate Sentences to replace any unticked words with new words. Then rinse and repeat until all the words present are unknown.</p>
+        </div>
+      </div>
+
+      <div class="step-card">
+        <div class="step-number">4</div>
+        <div class="step-content">
+          <h3>Generate Sentences</h3>
+          <p>Click "Generate Sentences" and wait 10-20 seconds. Claude AI will create personalized sentences using:</p>
+          <ul>
+            <li>Your known vocabulary (from Anki)</li>
+            <li>One target word per sentence</li>
+            <li>Natural, conversational Hebrew</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="step-card">
+        <div class="step-number">5</div>
+        <div class="step-content">
+          <h3>Review and Create Cards From Sentences</h3>
+          <p>Review the generated sentences. Each sentence shows:</p>
+          <ul>
+            <li><strong>Hebrew sentence</strong> - With the target word highlighted</li>
+            <li><strong>Clipboard button</strong> - To copy the sentence to your clipboard</li>
+            <li><strong>Reverse button</strong> - To open the sentene in Reverso</li>
+            <li><strong>Card button</strong> - To send the sentence to the card creator</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="section">
+      <h2>How It Works</h2>
+
+      <div class="faq-item">
+        <h3>Vocabulary Context</h3>
+        <p>The generator sends your vocabulary list to Claude AI (up to 3000 words by default).</p>
+        <p>Claude uses this context to ensure generated sentences only use words you know, plus exactly one new target word.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Quality Assurance</h3>
+        <p>Claude AI is specifically prompted to:</p>
+        <ul>
+          <li>Use natural, conversational Hebrew</li>
+          <li>Create sentences that make sense in real contexts</li>
+          <li>Vary sentence structure and topics</li>
+          <li>Ensure the target word is essential to the sentence meaning</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Cost Breakdown -->
+    <section class="section">
+      <h2>Cost & Usage</h2>
+
+      <div class="info-box">
+        <h3>Rough Costs</h3>
+        <p>With default settings (3000 words context):</p>
+        <ul>
+          <li><strong>Per session (5 words, 3 sentences each):</strong> ~$0.05</li>
+          <li><strong>Per word:</strong> ~$0.01 first request, ~$0.001 cached</li>
+          <li><strong>Monthly (daily use, 5 words/day):</strong> ~$1.50/month</li>
+          <li><strong>Yearly:</strong> ~$17/year for daily practice</li>
+        </ul>
+      </div>
+
+      <div class="step-card">
+        <div class="step-content">
+          <h3>Reducing Costs</h3>
+          <p>To minimize API costs:</p>
+          <ul>
+            <li><strong>Generate in batches</strong> - Generate for 5-10 words at once to leverage caching. 10 words in one day is cheaper than 10 over 2 days.</li>
+            <li><strong>Reduce vocabulary size</strong> - Configure max words in settings (default: 3000)</li>
+            <li><strong>Use natural content first</strong> - Reserve generator for targeted vocabulary gaps</li>
+            <li><strong>Set API spending limits</strong> - At console.anthropic.com/settings/limits</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="warning-box">
+        <strong>⚠️ Important:</strong> Always set spending limits on your Claude API account to prevent unexpected charges.
+      </div>
+    </section>
+
+    <!-- Troubleshooting -->
+    <section class="section">
+      <h2>Troubleshooting</h2>
+
+      <div class="faq-item">
+        <h3>Generator button is disabled</h3>
+        <ul>
+          <li>Make sure you have Claude API key configured in settings</li>
+          <li>Verify you have API credits at console.anthropic.com</li>
+          <li>Check that AnkiConnect shows "Connected"</li>
+        </ul>
+      </div>
+
+      <div class="faq-item">
+        <h3>Generation fails with error</h3>
+        <ul>
+          <li>Check API key is correct in settings</li>
+          <li>Verify spending limits aren't reached</li>
+          <li>Check browser console for detailed error messages</li>
+          <li>Report the error</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Back to Guide -->
+    <section class="section">
+      <div class="button-group">
+        <a href="cards.html" class="btn btn-secondary">← Back to Card Creator</a>
+        <a href="index.html" class="btn btn-primary">Back to Setup →</a>
+      </div>
+    </section>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Created with ❤️ for Hebrew learners worldwide</p>
+      <p class="footer-links">
+        <a href="https://github.com/yourusername/selfstudyhebrew">GitHub</a> •
+        <a href="https://github.com/yourusername/selfstudyhebrew/blob/main/LICENSE">License</a> •
+        <a href="https://buymeacoffee.com/selfstudyhebrew">Support</a>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
