@@ -22,7 +22,7 @@
 
   <div class="hero">
     <div class="hero-content">
-      <h1>🤖 i+1 Sentence Generator</h1>
+      <h1>i+1 Sentence Generator</h1>
       <p class="hero-subtitle">AI-powered personalized Hebrew sentences</p>
       <p class="hero-description">Generate custom i+1 sentences using your known vocabulary and AI. Perfect for focused vocabulary acquisition when you can't find natural content at your level.</p>
     </div>
@@ -47,7 +47,7 @@
           <h3>Open the Sentence Generator</h3>
           <p>Click the extension icon in your toolbar, then click the "Sentence Generator" button in the popup.</p>
           <div class="info-box">
-            <strong>⚡ Requirement:</strong> You must have Claude API configured in settings to use this feature.
+            <strong>Requirement:</strong> You must have Claude API configured in settings to use this feature.
             See the <a href="index.html#ai-features">Setup Guide</a> for instructions.
           </div>
         </div>
@@ -108,19 +108,17 @@
 
       <div class="faq-item">
         <h3>Vocabulary Context</h3>
-        <p>The generator sends your vocabulary list to Claude AI (up to 3000 words by default).</p>
-        <p>Claude uses this context to ensure generated sentences only use words you know, plus exactly one new target word.</p>
+        <p>The generator sends your vocabulary list to Claude AI (up to 3000 words by default, configurable in settings). Claude uses this context to ensure generated sentences only use words you know, plus exactly one new target word.</p>
       </div>
 
       <div class="faq-item">
         <h3>Quality Assurance</h3>
-        <p>Claude AI is specifically prompted to:</p>
-        <ul>
-          <li>Use natural, conversational Hebrew</li>
-          <li>Create sentences that make sense in real contexts</li>
-          <li>Vary sentence structure and topics</li>
-          <li>Ensure the target word is essential to the sentence meaning</li>
-        </ul>
+        <p>Claude AI is prompted to use natural, conversational Hebrew; create sentences that make sense in real contexts; vary sentence structure and topics; and ensure the target word is essential to the sentence meaning.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Custom Prompt</h3>
+        <p>The exact prompt sent to Claude for each word is fully editable in Settings → AI Integration → Sentence Generation Prompt. Use <code>{{TARGET_WORD}}</code> and <code>{{COUNT}}</code> as placeholders — they're substituted at runtime. A "Reset to Default" button restores the original prompt if you want to start over.</p>
       </div>
     </section>
 
@@ -129,31 +127,25 @@
       <h2>Cost & Usage</h2>
 
       <div class="info-box">
-        <h3>Rough Costs</h3>
-        <p>With default settings (3000 words context):</p>
-        <ul>
-          <li><strong>Per session (5 words, 3 sentences each):</strong> ~$0.05</li>
-          <li><strong>Per word:</strong> ~$0.01 first request, ~$0.001 cached</li>
-          <li><strong>Monthly (daily use, 5 words/day):</strong> ~$1.50/month</li>
-          <li><strong>Yearly:</strong> ~$17/year for daily practice</li>
-        </ul>
+        <h3>Cost Tracking</h3>
+        <p>The extension tracks the cost of every Claude API call — sentence generation, AI Translate, and AI Define — and shows a running total in Settings → AI Integration. Costs are calculated from the token usage returned by the API, using Anthropic's published per-model rates.</p>
+        <p>You can reset the total at any time from the settings page.</p>
       </div>
 
       <div class="step-card">
         <div class="step-content">
           <h3>Reducing Costs</h3>
-          <p>To minimize API costs:</p>
           <ul>
-            <li><strong>Generate in batches</strong> - Generate for 5-10 words at once to leverage caching. 10 words in one day is cheaper than 10 over 2 days.</li>
-            <li><strong>Reduce vocabulary size</strong> - Configure max words in settings (default: 3000)</li>
-            <li><strong>Use natural content first</strong> - Reserve generator for targeted vocabulary gaps</li>
-            <li><strong>Set API spending limits</strong> - At console.anthropic.com/settings/limits</li>
+            <li><strong>Generate in batches</strong> — generating for 5–10 words in one session is cheaper than spreading them across days, because the known-words list is sent as a cached prompt block.</li>
+            <li><strong>Reduce vocabulary size</strong> — lower the "Max Words for i+1 Generation" setting (default: 3000) to reduce tokens sent per call.</li>
+            <li><strong>Use natural content first</strong> — reserve the generator for targeted vocabulary gaps rather than as your primary input.</li>
+            <li><strong>Set API spending limits</strong> — at <a href="https://console.anthropic.com/settings/limits" target="_blank">console.anthropic.com/settings/limits</a>.</li>
           </ul>
         </div>
       </div>
 
       <div class="warning-box">
-        <strong>⚠️ Important:</strong> Always set spending limits on your Claude API account to prevent unexpected charges.
+        <strong>Important:</strong> Always set spending limits on your Claude API account to prevent unexpected charges.
       </div>
     </section>
 
@@ -192,7 +184,7 @@
 
   <footer class="footer">
     <div class="container">
-      <p>Created with ❤️ for Hebrew learners worldwide</p>
+      <p>Created with love for Hebrew learners worldwide</p>
       <p class="footer-links">
         <a href="https://github.com/selfstudyhebrew/selfstudyhebrew">GitHub</a>
       </p>

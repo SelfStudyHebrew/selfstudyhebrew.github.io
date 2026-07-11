@@ -22,7 +22,7 @@
 
   <div class="hero">
     <div class="hero-content">
-      <h1>📖 Dictionary Lookup</h1>
+      <h1>Dictionary Lookup</h1>
       <p class="hero-subtitle">Instant Hebrew word definitions with Shift+hover</p>
       <p class="hero-description">Get comprehensive word information including definitions, frequency rankings, potential verb recognition.</p>
     </div>
@@ -39,29 +39,28 @@
 
       <div class="feature-grid">
         <div class="feature-card">
-          <div class="feature-icon">⚡</div>
           <h3>Instant Lookup</h3>
           <p>Shift+hover any Hebrew word for immediate definition popup</p>
         </div>
         <div class="feature-card">
-          <div class="feature-icon">⚡</div>
-          <h3>Multiple Sources of Definitions</h3>
-          <p>The extension has built in dictionaries however there are also buttons to retrieve definitions from Google Translate, Reverso, and Pealim</p>
+          <h3>Play Pronunciation</h3>
+          <p>Hear any word spoken aloud via ElevenLabs TTS (if configured) or the browser's built-in speech engine as a fallback</p>
         </div>
         <div class="feature-card">
-          <div class="feature-icon">📊</div>
+          <h3>Multiple Definition Sources</h3>
+          <p>Built-in dictionaries plus one-click lookups from Google Translate, Reverso, and Pealim</p>
+        </div>
+        <div class="feature-card">
           <h3>Frequency Data</h3>
           <p>See how common a word is with frequency rankings from Hebrew corpora</p>
         </div>
         <div class="feature-card">
-          <div class="feature-icon">🔤</div>
           <h3>Verb Conjugations</h3>
-          <p>Automatic detection of potential verb forms, and returns the associated verb infitive as well as the link to Pealim</p>
+          <p>Automatic detection of potential verb forms, returning the infinitive and a link to Pealim</p>
         </div>
         <div class="feature-card">
-          <div class="feature-icon">✏️</div>
           <h3>Custom Definitions</h3>
-          <p>Add your own definitions and notes for any word</p>
+          <p>Add your own definitions and notes for any word, saved locally across all pages</p>
         </div>
       </div>
     </section>
@@ -76,7 +75,7 @@
           <h3>Hold Shift and Hover</h3>
           <p>Hold down the Shift key and hover your mouse over any Hebrew word on a webpage.</p>
           <div class="tip-box">
-            <strong>💡 Tip:</strong> Works on any website with Hebrew text—news sites, Wikipedia, social media, anywhere!
+            <strong>Tip:</strong> Works on any website with Hebrew text—news sites, Wikipedia, social media, anywhere!
           </div>
         </div>
       </div>
@@ -87,12 +86,12 @@
           <h3>View Word Information</h3>
           <p>A popup will appear showing:</p>
           <ul>
-            <li><strong>Word</strong> - The Hebrew word</li>
-            <li><strong>Definition</strong> - English translation from the built in dictionary if available</li>
-            <li><strong>Frequency Rank</strong> - How common the word is (lower number = more common)</li>
-            <li><strong>Verb Info</strong> - If a word is a confugated form of a verb it will return the infinitive and link to Pealim</li>
-            <li><strong>Custom Note</strong> - Your personal definition if you've added one</li>
-            <li><strong>External Definition Buttons</strong> - From a click of a button you can fetch the definition from Pealim, Reverso, or Google Translate</li>
+            <li><strong>Word</strong> — the Hebrew word with a 🔊 button to hear it pronounced</li>
+            <li><strong>Definition</strong> — English translation from the built-in dictionary if available</li>
+            <li><strong>Frequency Rank</strong> — how common the word is (lower = more common)</li>
+            <li><strong>Verb Info</strong> — if the word is a conjugated verb, returns the infinitive and a Pealim link</li>
+            <li><strong>Custom Note</strong> — your personal definition if you've added one</li>
+            <li><strong>External Lookup Buttons</strong> — one-click lookups from Pealim, Reverso, or Google Translate</li>
           </ul>
         </div>
       </div>
@@ -112,6 +111,28 @@
           <h3>Create Anki Card or Mark as Already Known</h3>
           <p>If you want to add the word to your Anki deck, click the "Create Card" button in the popup to open the card creator with the word pre-filled.</p>
           <p>If you already know the word, click "Mark as Already Known". This will add it to the "Already Known" deck in Anki and register the word as known.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ElevenLabs TTS -->
+    <section class="section">
+      <h2>Optional: ElevenLabs Pronunciation</h2>
+      <p>The 🔊 play button in the dictionary popup uses ElevenLabs for high-quality Hebrew TTS. Without it, the browser's built-in speech engine is used as a fallback (quality varies).</p>
+
+      <div class="step-card">
+        <div class="step-content">
+          <h3>Setting Up ElevenLabs</h3>
+          <ol>
+            <li>Create a free account at <a href="https://elevenlabs.io" target="_blank">elevenlabs.io</a> — the free tier is enough for casual use</li>
+            <li>Go to your profile → API Keys and create a key</li>
+            <li>Open the extension settings and paste it into <strong>ElevenLabs API Key</strong></li>
+            <li>Optionally choose a Voice ID and model — the defaults use a high-quality Hebrew voice</li>
+            <li>Save settings and click 🔊 on any word to test</li>
+          </ol>
+          <div class="tip-box">
+            <strong>Tip:</strong> ElevenLabs offers a free monthly character quota. For dictionary lookups it goes a very long way — most users will stay within the free tier.
+          </div>
         </div>
       </div>
     </section>
@@ -177,7 +198,7 @@
 
   <footer class="footer">
     <div class="container">
-      <p>Created with ❤️ for Hebrew learners worldwide</p>
+      <p>Created with love for Hebrew learners worldwide</p>
       <p class="footer-links">
         <a href="https://github.com/selfstudyhebrew/selfstudyhebrew">GitHub</a>
       </p>
