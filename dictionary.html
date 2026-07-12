@@ -108,9 +108,10 @@
       <div class="step-card">
         <div class="step-number">4</div>
         <div class="step-content">
-          <h3>Create Anki Card or Mark as Already Known</h3>
+          <h3>Create Anki Card, Mark as Known, or Ignore</h3>
           <p>If you want to add the word to your Anki deck, click the "Create Card" button in the popup to open the card creator with the word pre-filled.</p>
-          <p>If you already know the word, click "Mark as Already Known". This will add it to the "Already Known" deck in Anki and register the word as known.</p>
+          <p>If you already know the word, click "Mark as Already Known". This adds it to the <strong>Already Known</strong> deck in Anki (tagged <code>ssh-known</code>) and registers it as known immediately.</p>
+          <p>If the word is noise — transliterations, names, gibberish — click "Ignore Word". This adds it to the <strong>Ignored</strong> deck (tagged <code>ssh-ignored</code>), removing it from highlighting and i+1 detection entirely.</p>
         </div>
       </div>
     </section>
@@ -125,7 +126,7 @@
           <h3>Setting Up ElevenLabs</h3>
           <ol>
             <li>Create a free account at <a href="https://elevenlabs.io" target="_blank">elevenlabs.io</a> — the free tier is enough for casual use</li>
-            <li>Go to your profile → API Keys and create a key</li>
+            <li>Go to <a href="https://elevenlabs.io/app/developers/api-keys" target="_blank">elevenlabs.io/app/developers/api-keys</a> and create a key</li>
             <li>Open the extension settings and paste it into <strong>ElevenLabs API Key</strong></li>
             <li>Optionally choose a Voice ID and model — the defaults use a high-quality Hebrew voice</li>
             <li>Save settings and click 🔊 on any word to test</li>

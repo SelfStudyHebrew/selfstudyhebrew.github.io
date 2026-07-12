@@ -51,6 +51,14 @@
           <h3>Optional AI Translation</h3>
           <p>Claude AI provides accurate, context-aware translations of sentences and words</p>
         </div>
+        <div class="feature-card">
+          <h3>Image Search</h3>
+          <p>Search Wikimedia Commons and Openverse for an image to attach to the card — no API key required</p>
+        </div>
+        <div class="feature-card">
+          <h3>AI Image Generation</h3>
+          <p>Generate images with Cloudflare Workers AI (free) or Gemini (paid) directly from the card creator</p>
+        </div>
       </div>
     </section>
 
@@ -83,11 +91,17 @@
           <h3>Review the Card Details</h3>
           <p>The dialog shows:</p>
           <ul>
-            <li><strong>Target Anki Deck</strong> - The deck which the sentence will be added to, and. the note type being used. Defaults can be set in the Settings</li>
+            <li><strong>Target Anki Deck</strong> - The deck which the sentence will be added to, and the note type being used. Defaults can be set in Settings</li>
             <li><strong>Hebrew Sentence</strong> - The full sentence</li>
-            <li><strong>Audio Recorded</strong> - If you see this it means audio from video subtitles was recorded and will be put into the defined Audio field upon submitting</li>
+            <li><strong>Audio Recorded</strong> - If you see this it means audio from video subtitles was recorded and will be put into the Audio field upon submitting</li>
             <li><strong>Translate Button</strong> - If you have Claude configured it will use it to translate the sentence and output the result in the field next to the button</li>
             <li><strong>Define Button</strong> - If you have Claude configured it will use it to define each unknown word in the context of the sentence</li>
+            <li><strong>Image field</strong> - Find or generate an image to attach to the card. Three source tabs are available:
+              <ul>
+                <li><strong>All / Wikimedia / Openverse</strong> — search free image libraries. The search box is pre-filled with the unknown word(s). Click any result to store it in Anki.</li>
+                <li><strong>✨ Generate</strong> — AI image generation. Choose a provider (Cloudflare free or Gemini paid), edit the prompt if needed, and click Generate. The image is stored in Anki automatically.</li>
+              </ul>
+            </li>
           </ul>
           <p>You can edit any field before creating the card.</p>
         </div>

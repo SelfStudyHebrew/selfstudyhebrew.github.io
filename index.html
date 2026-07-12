@@ -193,7 +193,7 @@
           <ol>
             <li>Visit any Hebrew website</li>
             <li>Hebrew words should be highlighted based on their status in Anki</li>
-            <li>Shift+hover any word for definitions</li>
+            <li>Shift+hover any word for definitions — click "Mark as Already Known" to add it to the Already Known deck, or "Ignore Word" to exclude it from highlighting entirely</li>
             <li>Look for blue-tinted i+1 sentences, or purple-tinted potentially-i+1 sentences</li>
           </ol>
         </div>
@@ -203,7 +203,7 @@
     <!-- Optional AI Setup -->
     <section class="section" id="ai-features">
       <h2>Optional: AI &amp; TTS Features</h2>
-      <p>Two optional integrations unlock additional features. Both are entirely optional and have costs if you use them.</p>
+      <p>Several optional integrations unlock additional features. All are optional — use only what you need.</p>
 
       <div class="step-card">
         <div class="step-content">
@@ -226,13 +226,46 @@
           <p>Powers the 🔊 play button in the dictionary popup, and also the "AI Audio" button in the card creator.</p>
           <ol>
             <li>Create a free account at <a href="https://elevenlabs.io" target="_blank">elevenlabs.io</a></li>
-            <li>Go to Profile → API Keys and create a key</li>
+            <li>Go to <a href="https://elevenlabs.io/app/developers/api-keys" target="_blank">elevenlabs.io/app/developers/api-keys</a> and create a key</li>
             <li>Open extension settings and paste it into <strong>ElevenLabs API Key</strong></li>
+            <li>Choose a voice preset — <strong>Anatole (Masc)</strong> or <strong>Anet (Fem)</strong> — or enter any ElevenLabs Voice ID</li>
             <li>Save settings</li>
           </ol>
           <div class="tip-box">
-            <strong>Tip:</strong> ElevenLabs has a generous free tier (Currently 10k credits per month). Dictionary pronunciation lookups use very few characters — most users will never need a paid plan. - <a href="https://elevenlabs.io/pricing" target="_blank">Pricing</a>
+            <strong>Tip:</strong> ElevenLabs has a free tier (10,000 characters/month). Dictionary pronunciation lookups use very few characters — most users will never need a paid plan. <a href="https://elevenlabs.io/pricing" target="_blank">Pricing</a>
           </div>
+          <div class="info-box" style="margin-top:10px;">
+            <strong>Check your usage:</strong> Settings → AI Integration → <em>ElevenLabs Character Usage</em> shows your current character count against your monthly limit, fetched live from your account. Click <strong>Refresh</strong> to update it.
+          </div>
+        </div>
+      </div>
+
+      <div class="step-card">
+        <div class="step-content">
+          <h3>Cloudflare Workers AI — Free Image Generation</h3>
+          <p>Powers the ✨ Generate tab in the card creator image picker. Uses Flux Schnell by default — fast, free, no billing required.</p>
+          <ol>
+            <li>Sign up or log in at <a href="https://dash.cloudflare.com/" target="_blank">dash.cloudflare.com</a></li>
+            <li>Copy your <strong>Account ID</strong> from the URL — it's the hex string in <code>dash.cloudflare.com/<strong>{account-id}</strong>/home</code></li>
+            <li>Go to <strong>Manage Account → Account API Tokens → Create Token</strong> (or visit <code>dash.cloudflare.com/<strong>{account-id}</strong>/api-tokens</code>) and add <strong>Account &gt; Workers AI &gt; Read</strong> permission</li>
+            <li>Open extension settings and paste both into <strong>Cloudflare Account ID</strong> and <strong>Cloudflare API Token</strong></li>
+            <li>Save settings</li>
+          </ol>
+          <div class="tip-box">
+            <strong>Tip:</strong> Cloudflare's free tier includes 10,000 neurons/day (~50–100 images). You can change the model in settings — see <a href="https://developers.cloudflare.com/workers-ai/models/?tasks=Text-to-Image" target="_blank">available text-to-image models</a> (free ones are marked Cloudflare-hosted without a Partner badge).
+          </div>
+        </div>
+      </div>
+
+      <div class="step-card">
+        <div class="step-content">
+          <h3>Gemini API — Paid Image Generation (Alternative)</h3>
+          <p>An alternative to Cloudflare for image generation in the card creator's ✨ Generate tab. Not recommended over Cloudflare — Gemini image generation has no free tier and requires billing (~$0.05/image).</p>
+          <ol>
+            <li>Get an API key from <a href="https://aistudio.google.com/apikey" target="_blank">aistudio.google.com</a> and enable billing</li>
+            <li>Open extension settings and paste it into <strong>Gemini API Key</strong></li>
+            <li>Save settings</li>
+          </ol>
         </div>
       </div>
     </section>
