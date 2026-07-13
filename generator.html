@@ -117,8 +117,14 @@
       </div>
 
       <div class="faq-item">
-        <h3>Custom Prompt</h3>
-        <p>The exact prompt sent to Claude for each word is fully editable in Settings → AI Integration → Sentence Generation Prompt. Use <code>{{TARGET_WORD}}</code> and <code>{{COUNT}}</code> as placeholders — they're substituted at runtime. A "Reset to Default" button restores the original prompt if you want to start over.</p>
+        <h3>Custom Prompts</h3>
+        <p>All three Claude prompts are fully editable in Settings → AI Integration:</p>
+        <ul>
+          <li><strong>Sentence Generation Prompt</strong> — the prompt used for each target word. Supports <code>{{TARGET_WORD}}</code> and <code>{{COUNT}}</code> placeholders.</li>
+          <li><strong>AI Define Prompt</strong> — the prompt used when you click Define in the card creator. Supports <code>{{SENTENCE}}</code> and <code>{{WORD}}</code> placeholders.</li>
+          <li><strong>AI Translate Prompt</strong> — the prompt used when you click Translate in the card creator. Supports <code>{{SENTENCE}}</code> and <code>{{CONTEXT}}</code> placeholders.</li>
+        </ul>
+        <p>Each prompt has a "Reset to Default" button to restore the original if needed.</p>
       </div>
     </section>
 
