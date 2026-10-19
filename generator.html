@@ -45,7 +45,7 @@
         <div class="step-number">1</div>
         <div class="step-content">
           <h3>Open the Sentence Generator</h3>
-          <p>Click the extension icon in your toolbar, then click the "Sentence Generator" button in the popup.</p>
+          <p>Click the extension icon in your toolbar, then click the "Generate i+1 Sentences" button in the popup.</p>
           <div class="info-box">
             <strong>Requirement:</strong> You must have Claude API configured in settings to use this feature.
             See the <a href="index.html#ai-features">Setup Guide</a> for instructions.
@@ -70,7 +70,7 @@
           <ul>
             <li><strong> Untick if you know it</strong> - This will mark it as known</li>
           </ul>
-          <p>Click "Generate Sentences to replace any unticked words with new words. Then rinse and repeat until all the words present are unknown.</p>
+          <p>Click "Generate Sentences" to replace any unticked words with new words. Repeat until every word in the list is one you don't know, then click "Generate Sentences" once more to start generating.</p>
         </div>
       </div>
 
@@ -95,9 +95,15 @@
           <ul>
             <li><strong>Hebrew sentence</strong> - With the target word highlighted</li>
             <li><strong>Clipboard button</strong> - To copy the sentence to your clipboard</li>
-            <li><strong>Reverse button</strong> - To open the sentene in Reverso</li>
+            <li><strong>Reverso button</strong> - To open the sentence in Reverso</li>
             <li><strong>Card button</strong> - To send the sentence to the card creator</li>
           </ul>
+          <p>Below the results:</p>
+          <ul>
+            <li><strong>Export to File</strong> - Download all generated words and sentences as a JSON file</li>
+            <li><strong>Generate More</strong> - Go back to the start screen to generate another batch</li>
+          </ul>
+          <p>Your last batch is saved — next time you open the generator, click <strong>Load Previous Results</strong> to pick up where you left off.</p>
         </div>
       </div>
     </section>
@@ -145,7 +151,7 @@
             <li><strong>Generate in batches</strong> — generating for 5–10 words in one session is cheaper than spreading them across days, because the known-words list is sent as a cached prompt block.</li>
             <li><strong>Reduce vocabulary size</strong> — lower the "Max Words for i+1 Generation" setting (default: 3000) to reduce tokens sent per call.</li>
             <li><strong>Use natural content first</strong> — reserve the generator for targeted vocabulary gaps rather than as your primary input.</li>
-            <li><strong>Set API spending limits</strong> — at <a href="https://console.anthropic.com/settings/limits" target="_blank">console.anthropic.com/settings/limits</a>.</li>
+            <li><strong>Set API spending limits</strong> — at <a href="https://platform.claude.com/settings/limits" target="_blank">platform.claude.com/settings/limits</a>.</li>
           </ul>
         </div>
       </div>
@@ -163,7 +169,7 @@
         <h3>Generator button is disabled</h3>
         <ul>
           <li>Make sure you have Claude API key configured in settings</li>
-          <li>Verify you have API credits at console.anthropic.com</li>
+          <li>Verify you have API credits at platform.claude.com</li>
           <li>Check that AnkiConnect shows "Connected"</li>
         </ul>
       </div>

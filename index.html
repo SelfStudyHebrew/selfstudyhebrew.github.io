@@ -35,7 +35,7 @@
 
   <div class="container">
     <!-- Quick Overview -->
-    <section class="section">
+    <section class="section" id="highlighting">
       <h2>What is SelfStudyHebrew?</h2>
       <p>SelfStudyHebrew is a browser extension that helps you learn Hebrew through comprehensible input. It highlights Hebrew words on any webpage based on your Anki progress, detects optimal learning sentences (i+1), and provides instant dictionary lookups. It also provides sentence mining functionality through video subtitles or AI generated sentences.</p>
 
@@ -56,7 +56,7 @@
           <div class="color-box red-underline">חדש</div>
           <span>Unknown words</span>
         </div>
-        <div class="color-item">
+        <div class="color-item" id="i1">
           <div class="color-box i1-bg">i+1 sentence</div>
           <span>Exactly 1 unknown word — optimal learning zone</span>
         </div>
@@ -162,7 +162,7 @@
           <ol>
             <li>Click the Extension button in your toolbar, then on the popup screen click "Settings"</li>
             <li>Scroll down and click the "Setup Anki for SelfStudyHebrew" button.</li>
-            <li>Under "Card Creation Defaults" set which deck you want to save your sentences to, and the default note type to use. If using SelfStudyHebrew defaults, these values will be "SelfStudyHebrew" and "Hebrew"</li>
+            <li>Under "Card Creation Defaults" set which deck you want to save your sentences to, and the default note type to use. If you used the setup button, the defaults are the "Sentence Mining" deck and the "SelfStudyHebrew" note type</li>
             <li>Under "Highlighting Options", set <strong>Anki Field Name</strong> to match your Hebrew field (default: "Hebrew")</li>
             <li>Click "Save Settings"</li>
           </ol>
@@ -210,12 +210,12 @@
           <h3>Claude API — Translations &amp; Sentence Generation</h3>
           <p>Powers the Translate and Define buttons in the card creator, and the i+1 Sentence Generator.</p>
           <ol>
-            <li>Get an API key from <a href="https://console.anthropic.com/" target="_blank">console.anthropic.com</a></li>
+            <li>Get an API key from <a href="https://platform.claude.com/settings/keys" target="_blank">platform.claude.com</a></li>
             <li>Open extension settings and paste it into <strong>Claude API Key</strong></li>
             <li>Save settings</li>
           </ol>
           <div class="warning-box">
-            <strong>Strongly recommended:</strong> Set a spend limit at <a href="https://console.anthropic.com/settings/limits" target="_blank">console.anthropic.com/settings/limits</a> and disable "Auto reload credits" at <a href="https://console.anthropic.com/settings/billing" target="_blank">console.anthropic.com/settings/billing</a> to prevent unexpected charges. Your API key is stored in your browser — keep your machine secure.
+            <strong>Strongly recommended:</strong> Set a spend limit at <a href="https://platform.claude.com/settings/limits" target="_blank">platform.claude.com/settings/limits</a> and disable "Auto reload credits" at <a href="https://platform.claude.com/settings/billing" target="_blank">platform.claude.com/settings/billing</a> to prevent unexpected charges. Your API key is stored in your browser — keep your machine secure.
           </div>
         </div>
       </div>
@@ -286,7 +286,7 @@
       <div class="faq-item">
         <h3>Words not highlighting</h3>
         <ul>
-          <li>Check "Enable Highlighting" is on in the popup</li>
+          <li>Check highlighting is switched on in the popup — the button reads "Disable Highlighting" when it's on. This one button controls both the word underlines and the i+1 sentence highlights</li>
           <li>Verify "Anki Field Name" matches your cards</li>
           <li>Click "Refresh Words"</li>
         </ul>
@@ -295,6 +295,7 @@
       <div class="faq-item">
         <h3>YouTube subtitles not working</h3>
         <ul>
+          <li>Check subtitles aren't hidden — the popup button should read "Hide Subtitles" (click "Show Subtitles" if not)</li>
           <li>Make sure the video has Hebrew subtitles</li>
           <li>Try refreshing the page</li>
           <li>Disable VPN if you get anti-bot warnings</li>
