@@ -76,7 +76,8 @@
         <h3>How It Works</h3>
         <ul>
           <li><strong>ו (and)</strong> - Words starting with ו are treated as fully known if you know the base word. Example: אני → ואני</li>
-          <li><strong>ל/ב/ש</strong> - Words with these prepositions are marked as "potentially-known" (purple underline) if you know the base word</li>
+          <li><strong>ה/ל/ב/ש</strong> - Words with the definite article or these prepositions are marked as "potentially-known" (purple underline) if you know the base word</li>
+          <li><strong>Plurals and feminine forms</strong> - A regular plural or feminine form of a word you know (for example חברה when you know חבר, or שפות when you know שפה) is also marked as "potentially-known"</li>
           <li><strong>Potentially-i+1 sentences</strong> - Sentences with 1 potentially-known word and 0-1 unknown words (light purple background)</li>
         </ul>
         <p>This helps you understand more content by recognizing words, even if you haven't seen that exact preposition+word combination before.</p>
@@ -214,6 +215,7 @@
             <li>Open extension settings and paste it into <strong>Claude API Key</strong></li>
             <li>Save settings</li>
           </ol>
+          <p><strong>Claude Model:</strong> leave this on <code>auto</code> and the extension always uses the newest Sonnet model available to your key (Haiku for subtitle translation), so you never need to update it by hand. Settings shows which model <em>auto</em> currently resolves to, with a <strong>Check now</strong> button to refresh it. You can still type a specific model name to pin one.</p>
           <div class="warning-box">
             <strong>Strongly recommended:</strong> Set a spend limit at <a href="https://platform.claude.com/settings/limits" target="_blank">platform.claude.com/settings/limits</a> and disable "Auto reload credits" at <a href="https://platform.claude.com/settings/billing" target="_blank">platform.claude.com/settings/billing</a> to prevent unexpected charges. Your API key is stored in your browser — keep your machine secure.
           </div>
@@ -242,8 +244,24 @@
 
       <div class="step-card">
         <div class="step-content">
-          <h3>Cloudflare Workers AI — Free Image Generation</h3>
-          <p>Powers the ✨ Generate tab in the card creator image picker. Uses Flux Schnell by default — fast, free, no billing required.</p>
+          <h3>Pollinations — Image Generation (Recommended)</h3>
+          <p>Powers the ✨ Generate tab in the card creator image picker, with noticeably better images than the Cloudflare default.</p>
+          <ol>
+            <li>Create a free account at <a href="https://pollinations.ai" target="_blank">pollinations.ai</a> and create an API key from its dashboard</li>
+            <li>Open extension settings and paste it into <strong>Pollinations API Key</strong></li>
+            <li>Optionally pick a <strong>Pollinations Image Model</strong> — the default is a fast, low-cost model</li>
+            <li>Save settings</li>
+          </ol>
+          <div class="tip-box">
+            <strong>Tip:</strong> Pollinations bills each image against your account's credits, and different models cost different amounts, so check your balance on the Pollinations dashboard if images stop generating.
+          </div>
+        </div>
+      </div>
+
+      <div class="step-card">
+        <div class="step-content">
+          <h3>Cloudflare Workers AI — Free Image Generation (Alternative)</h3>
+          <p>Another option for the ✨ Generate tab. Uses Flux Schnell by default — fast, free, no billing required, but the images are lower quality than Pollinations.</p>
           <ol>
             <li>Sign up or log in at <a href="https://dash.cloudflare.com/" target="_blank">dash.cloudflare.com</a></li>
             <li>Copy your <strong>Account ID</strong> from the URL — it's the hex string in <code>dash.cloudflare.com/<strong>{account-id}</strong>/home</code></li>
@@ -260,7 +278,7 @@
       <div class="step-card">
         <div class="step-content">
           <h3>Gemini API — Paid Image Generation (Alternative)</h3>
-          <p>An alternative to Cloudflare for image generation in the card creator's ✨ Generate tab. Not recommended over Cloudflare — Gemini image generation has no free tier and requires billing (~$0.05/image).</p>
+          <p>An alternative for image generation in the card creator's ✨ Generate tab. Gemini image generation has no free tier and requires billing (~$0.05/image).</p>
           <ol>
             <li>Get an API key from <a href="https://aistudio.google.com/apikey" target="_blank">aistudio.google.com</a> and enable billing</li>
             <li>Open extension settings and paste it into <strong>Gemini API Key</strong></li>
@@ -306,7 +324,7 @@
     <!-- Support -->
     <section class="section">
       <h2>Support & Contribute</h2>
-      <p>SelfStudyHebrew is open-source. Found a bug? Have a feature request? Visit the GitHub repository.</p>
+      <p>SelfStudyHebrew is open-source. Found a bug? Use the <strong>Report a Bug</strong> button in the extension popup or settings — it opens a short form, no GitHub account needed. Have a feature request? Visit the GitHub repository.</p>
       <div class="button-group">
         <a href="https://github.com/selfstudyhebrew/selfstudyhebrew" class="btn btn-primary" target="_blank">GitHub</a>
         <a href="https://github.com/selfstudyhebrew/selfstudyhebrew/issues" class="btn btn-secondary" target="_blank">Report Issue</a>

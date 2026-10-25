@@ -69,6 +69,7 @@
           <p>The generator first shows you a list of words to review. These are the highest frequency words that you do not currently know. For each word:</p>
           <ul>
             <li><strong> Untick if you know it</strong> - This will mark it as known</li>
+            <li><strong>"likely a name"</strong> - Words that are mostly used as names (for example אלי, which is usually the name Eli) are flagged next to their rank and unticked by default. Tick one if you do want sentences for it.</li>
           </ul>
           <p>Click "Generate Sentences" to replace any unticked words with new words. Repeat until every word in the list is one you don't know, then click "Generate Sentences" once more to start generating.</p>
         </div>
@@ -78,7 +79,7 @@
         <div class="step-number">4</div>
         <div class="step-content">
           <h3>Generate Sentences</h3>
-          <p>Click "Generate Sentences" and wait 10-20 seconds. Claude AI will create personalized sentences using:</p>
+          <p>Click "Generate Sentences" and give it a little while — every sentence is checked and proofread before it is shown. Claude AI will create personalized sentences using:</p>
           <ul>
             <li>Your known vocabulary (from Anki)</li>
             <li>One target word per sentence</li>
@@ -120,6 +121,13 @@
       <div class="faq-item">
         <h3>Quality Assurance</h3>
         <p>Claude AI is prompted to use natural, conversational Hebrew; create sentences that make sense in real contexts; vary sentence structure and topics; and ensure the target word is essential to the sentence meaning.</p>
+        <p>Every sentence goes through two checks before you see it:</p>
+        <ul>
+          <li><strong>Vocabulary check</strong> — using the same rules as the word highlighter, every word except the target must be a word you know. A known word may also appear with a single ו, ל, ב or ש prefix, with the definite article ה (also after ו or ש, as in שהבית), or in its regular plural or feminine form (for example סוגים from סוג, or חברה from חבר). Irregular forms such as בתים are not recognised.</li>
+          <li><strong>Grammar and meaning check</strong> — a second Claude call proofreads the sentences that passed the vocabulary check and drops any with agreement or definiteness errors (for example "בגדים שונות"), unnatural wording, or illogical meaning.</li>
+        </ul>
+        <p>Sentences that fail are rejected and Claude is asked again (up to three attempts per word). If a word still has too few verified sentences, the closest ones are shown with an amber "Not verified" note listing the extra words they contain; these also go through the grammar and meaning check.</p>
+        <p>The word list skips forms that are just a known word plus a common prefix or plural/feminine ending (for example הבית when you already have בית), and flags words that are mostly names, so you are offered genuinely new vocabulary.</p>
       </div>
 
       <div class="faq-item">
@@ -148,6 +156,7 @@
         <div class="step-content">
           <h3>Reducing Costs</h3>
           <ul>
+            <li><strong>Expect roughly 2 cents per word</strong> — the retries and the proofreading check add a few calls per word, but each is small.</li>
             <li><strong>Generate in batches</strong> — generating for 5–10 words in one session is cheaper than spreading them across days, because the known-words list is sent as a cached prompt block.</li>
             <li><strong>Reduce vocabulary size</strong> — lower the "Max Words for i+1 Generation" setting (default: 3000) to reduce tokens sent per call.</li>
             <li><strong>Use natural content first</strong> — reserve the generator for targeted vocabulary gaps rather than as your primary input.</li>
